@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Exchange rates</title>
+</head>
+<body>
+    <div id="pageContent" class="container">
+
+        <!-- File upload -->
+
+        <div class="row">
+            <div class="card-panel hoverable green lighten-4 col s12">
+                <div class="row">
+                    <label for="fileInput" class="center-align col s12 black-text"><h4>Choose a .CSV file to use:</h4></label>
+                </div>
+                <div class="row">
+                    <input type="file" accept=".csv" id="fileInput" name="file" class="center-align col s12" />
+                    <pre id="fileContent"></pre>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <button id="createChart" class="green lighten-4 black-text btn-large col s12">CREATE CHART</button>
+        </div>
+
+        <!-- Graph -->
+
+        <div id="chartContainer" class="row">
+            <canvas id="myChart" width="700" height="400"></canvas>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.stock.min.js"></script>
+    <script src="investor.js"></script>
+    <script src="graph.js"></script>
+</body>
+</html>
